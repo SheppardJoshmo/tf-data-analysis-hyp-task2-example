@@ -10,5 +10,5 @@ def solution(x: np.array, y: np.array) -> bool:
     alpha = 0.05
     Anderson_Darling_test = anderson_ksamp([x, y])
     stat, p_value = Anderson_Darling_test.statistic, Anderson_Darling_test.pvalue
-    answer = p_value <= 0.05
+    answer = p_value < 0.05
     return answer
